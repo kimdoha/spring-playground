@@ -8,8 +8,10 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+@Getter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
@@ -23,7 +25,12 @@ public class Member {
   @Column(nullable = false)
   private String name;
 
-  Member of(String name) {
+  public Member update(String name) {
+    this.name = name;
+    return this;
+  }
+
+  public static Member of(String name) {
     return Member.builder()
         .name(name)
         .build();
