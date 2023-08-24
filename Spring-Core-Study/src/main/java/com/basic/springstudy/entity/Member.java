@@ -9,10 +9,12 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Getter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "members")
@@ -25,4 +27,10 @@ public class Member {
   @Enumerated(value = EnumType.STRING)
   private Grade grade;
 
+  public static Member of(String name, Grade grade) {
+    return Member.builder()
+        .name(name)
+        .grade(grade)
+        .build();
+  }
 }
