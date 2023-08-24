@@ -4,16 +4,10 @@ import com.basic.jpastudy.entity.Member;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
-import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.PersistenceUnit;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
@@ -47,7 +41,7 @@ public class MemberController {
       Member deleteMember = em.find(Member.class, 1L);
       em.remove(deleteMember);
 
-
+      tx.commit();
     } catch (Exception e) {
       tx.rollback();
     } finally {
