@@ -1,7 +1,8 @@
-package com.basic.springstudy.service;
+package com.basic.springstudy.service.member;
 
 import com.basic.springstudy.entity.Member;
 import com.basic.springstudy.repository.MemberRepository;
+import com.basic.springstudy.service.member.MemberService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -10,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Slf4j
 @Service
 @RequiredArgsConstructor
-public class MemberServiceImpl implements MemberService{
+public class MemberServiceImpl implements MemberService {
   private final MemberRepository memberRepository;
 
   @Override

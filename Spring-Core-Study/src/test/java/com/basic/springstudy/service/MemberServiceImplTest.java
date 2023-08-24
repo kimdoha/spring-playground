@@ -5,6 +5,7 @@ import static org.assertj.core.api.Assertions.*;
 import com.basic.springstudy.entity.Member;
 import com.basic.springstudy.entity.enums.Grade;
 import com.basic.springstudy.repository.MemberRepository;
+import com.basic.springstudy.service.member.MemberServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
