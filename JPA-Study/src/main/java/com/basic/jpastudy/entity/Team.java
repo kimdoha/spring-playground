@@ -4,10 +4,12 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
 import java.time.ZonedDateTime;
+import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
@@ -25,6 +27,9 @@ public class Team {
 
   private ZonedDateTime createdDate;
   private ZonedDateTime lastModifiedDate;
+
+  @OneToMany(mappedBy = "team")
+  private List<Member> members;
 
   @PrePersist
   void onPrePersist() {
