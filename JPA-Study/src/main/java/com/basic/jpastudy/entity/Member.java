@@ -2,12 +2,9 @@ package com.basic.jpastudy.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
@@ -31,19 +28,17 @@ public class Member {
   @Column(nullable = false)
   private String name;
 
-  @ManyToOne(fetch = FetchType.LAZY)
-  @JoinColumn(name = "team_id")
-  private Team team;
+  private String city;
+
+  private String street;
+
+  @Column(name = "zipcode")
+  private String zipCode;
 
   private ZonedDateTime createdDate;
+
   private ZonedDateTime lastModifiedDate;
 
-  public static Member of(String name, Team team) {
-    return Member.builder()
-        .name(name)
-        .team(team)
-        .build();
-  }
 
   @PrePersist
   void onPrePersist() {
