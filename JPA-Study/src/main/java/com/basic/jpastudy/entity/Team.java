@@ -1,47 +1,39 @@
 package com.basic.jpastudy.entity;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
 import java.time.ZonedDateTime;
+import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Getter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "members")
+@Table(name = "teams")
 @Entity
-public class Member {
+public class Team {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-
-  @Column(nullable = false)
   private String name;
-
-  @ManyToOne(fetch = FetchType.LAZY)
-  @JoinColumn(name = "team_id")
-  private Team team;
 
   private ZonedDateTime createdDate;
   private ZonedDateTime lastModifiedDate;
 
-  public static Member of(String name, Team team) {
-    return Member.builder()
+  @OneToMany(mappedBy = "team")
+  private List<Member> members;
+
+  public static Team of(String name) {
+    return Team.builder()
         .name(name)
-        .team(team)
         .build();
   }
 
