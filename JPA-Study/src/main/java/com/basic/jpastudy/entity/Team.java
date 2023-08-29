@@ -31,6 +31,12 @@ public class Team {
   @OneToMany(mappedBy = "team")
   private List<Member> members;
 
+  public static Team of(String name) {
+    return Team.builder()
+        .name(name)
+        .build();
+  }
+
   @PrePersist
   void onPrePersist() {
     this.createdDate = ZonedDateTime.now();
