@@ -2,10 +2,15 @@ package com.basic.unittest;
 
 import java.util.List;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.DisplayNameGeneration;
+import org.junit.jupiter.api.DisplayNameGenerator;
 import org.junit.jupiter.api.Test;
 
+@DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
 public class JUnitPracticeTest {
   @Test
+  @DisplayName("Assert Equals 메소드 테스트")
   public void assertEqualsTest() {
     String expect = "Something";
     String actual = "Something";
@@ -14,6 +19,7 @@ public class JUnitPracticeTest {
   }
 
   @Test
+  @DisplayName("Assert Not Equals 메소드 테스트")
   public void assertNotEqualsTest() {
     String expect = "Something";
     String actual = "Hello";
@@ -22,6 +28,7 @@ public class JUnitPracticeTest {
   }
 
   @Test
+  @DisplayName("Assert True Test 메소드 테스트")
   public void assertTrueTest() {
     Integer a = 10;
     Integer b = 10;
@@ -30,6 +37,7 @@ public class JUnitPracticeTest {
   }
 
   @Test
+  @DisplayName("Assert False 메소드 테스트")
   public void assertFalseTest() {
     Integer a = 10;
     Integer b = 20;
@@ -39,6 +47,7 @@ public class JUnitPracticeTest {
 
 
   @Test
+  @DisplayName("Assert Throws 메소드 테스트")
   public void assertThrowsTest() {
     Assertions.assertThrows(RuntimeException.class, () -> {
       throw new RuntimeException();
@@ -46,18 +55,21 @@ public class JUnitPracticeTest {
   }
 
   @Test
+  @DisplayName("Assert Not Null 메소드 테스트")
   public void assertNotNullTest() {
     String value = "Hello";
     Assertions.assertNotNull(value);
   }
 
   @Test
+  @DisplayName("Assert Null 메소드 테스트")
   public void assertNullTest() {
     String value = null;
     Assertions.assertNull(value);
   }
 
   @Test
+  @DisplayName("Assert Iterable Equals 메소드 테스트")
   public void assertIterableEqualsTest() {
     List<Integer> list1 = List.of(1, 2);
     List<Integer> list2 = List.of(1, 2);
@@ -66,6 +78,7 @@ public class JUnitPracticeTest {
   }
 
   @Test
+  @DisplayName("Assert All 메소드 테스트")
   public void assertAllTest() {
     String expect = "Something";
     String actual = "Something";
