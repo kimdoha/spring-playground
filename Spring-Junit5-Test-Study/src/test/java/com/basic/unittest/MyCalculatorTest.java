@@ -57,7 +57,7 @@ class MyCalculatorTest {
   @DisplayName("MyCalculator 사칙연산 테스트")
   void complicatedCalculateTest() {
 
-    // givin
+    // given
     MyCalculator myCalculator = new MyCalculator(0.0);
 
     // when
