@@ -1,6 +1,7 @@
 package com.basic.jpastudy.entity;
 
 import com.basic.jpastudy.entity.enums.OrderStatus;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -34,7 +35,7 @@ public class Order {
   @JoinColumn(name = "member_id")
   private Member member;
 
-  @OneToOne(fetch = FetchType.LAZY)
+  @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
   @JoinColumn(name = "delivery_id")
   private Delivery delivery;
 
