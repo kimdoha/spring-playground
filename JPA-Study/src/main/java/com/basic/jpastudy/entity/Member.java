@@ -1,6 +1,8 @@
 package com.basic.jpastudy.entity;
 
+import com.basic.jpastudy.entity.embedded.Address;
 import jakarta.persistence.Column;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -20,19 +22,15 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Table(name = "members")
 @Entity
-public class Member {
+public class Member extends BaseEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "MEMBER_ID")
   private Long id;
 
   @Column(nullable = false)
   private String name;
 
-  private String city;
-
-  private String street;
-
-  @Column(name = "zipcode")
-  private String zipCode;
-
+  @Embedded
+  private Address homeAddress;
 }
