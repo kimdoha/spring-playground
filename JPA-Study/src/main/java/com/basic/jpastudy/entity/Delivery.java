@@ -1,7 +1,8 @@
 package com.basic.jpastudy.entity;
 
+import com.basic.jpastudy.entity.embedded.Address;
 import com.basic.jpastudy.entity.enums.DeliveryStatus;
-import jakarta.persistence.Column;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -20,18 +21,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Table(name = "deliveries")
 @Entity
-public class Delivery {
+public class Delivery extends BaseEntity {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  private String city;
-
-  private String street;
-
-  @Column(name = "zip_code")
-  private String zipCode;
+  @Embedded
+  private Address deiveryAddress;
 
   @Enumerated(value = EnumType.STRING)
   private DeliveryStatus deliveryStatus;
