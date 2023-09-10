@@ -1,18 +1,18 @@
-package com.basic.springstudy;
+package com.basic.springstudy.bean;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
+import com.basic.springstudy.AppConfig;
 import com.basic.springstudy.service.member.MemberService;
 import com.basic.springstudy.service.member.MemberServiceImpl;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class ApplicationContextBasicTest {
-  AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+  AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext( AppConfig.class);
 
   @Test
   @DisplayName("빈 이름으로 조회")

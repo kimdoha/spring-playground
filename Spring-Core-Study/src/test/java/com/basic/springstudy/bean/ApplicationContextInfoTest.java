@@ -1,12 +1,13 @@
-package com.basic.springstudy;
+package com.basic.springstudy.bean;
 
+import com.basic.springstudy.AppConfig;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class ApplicationContextInfoTest {
-  AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+  AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext( AppConfig.class);
 
   @Test
   @DisplayName("모든 빈 출력하기")
