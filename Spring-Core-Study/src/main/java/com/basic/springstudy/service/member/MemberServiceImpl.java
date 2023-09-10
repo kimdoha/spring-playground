@@ -15,6 +15,11 @@ import org.springframework.transaction.annotation.Transactional;
 public class MemberServiceImpl implements MemberService {
   private final MemoryMemberRepository memberRepository;
 
+  //테스트 용도
+  public MemoryMemberRepository getMemberRepository() {
+    return memberRepository;
+  }
+
   @Override
   @Transactional
   public Long join(Member member) {
