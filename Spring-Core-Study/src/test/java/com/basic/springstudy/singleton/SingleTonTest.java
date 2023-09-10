@@ -22,4 +22,14 @@ public class SingleTonTest {
     // 참조 값이 다른 것을 확인
     Assertions.assertFalse(memberService1 == memberService2);
   }
+
+
+  @Test
+  @DisplayName("싱글톤 패턴을 적용한 객체 사용")
+  void singletonServiceTest() {
+    SingletonService singletonService1 = SingletonService.getInstance();
+    SingletonService singletonService2 = SingletonService.getInstance();
+
+    Assertions.assertTrue(singletonService1 == singletonService2);
+  }
 }
