@@ -2,6 +2,7 @@ package com.basic.springstudy.service.member;
 
 import com.basic.springstudy.entity.Member;
 import com.basic.springstudy.repository.MemberRepository;
+import com.basic.springstudy.repository.MemoryMemberRepository;
 import com.basic.springstudy.service.member.MemberService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -12,18 +13,18 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @RequiredArgsConstructor
 public class MemberServiceImpl implements MemberService {
-  private final MemberRepository memberRepository;
+  private final MemoryMemberRepository memberRepository;
 
   @Override
   @Transactional
   public Long join(Member member) {
-    Member newMember = memberRepository.save(member);
-    return newMember.getId();
+    memberRepository.save(member);
+    return member.getId();
   }
 
   @Override
   @Transactional(readOnly = true)
   public Member findMember(Long memberId) {
-    return memberRepository.findById(memberId).get();
+    return memberRepository.findById(memberId);
   }
 }
