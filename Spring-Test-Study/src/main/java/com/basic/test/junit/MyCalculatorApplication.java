@@ -1,4 +1,6 @@
-package com.basic.unittest;
+package com.basic.test.junit;
+
+import com.basic.test.junit.MyCalculator;
 
 public class MyCalculatorApplication {
 

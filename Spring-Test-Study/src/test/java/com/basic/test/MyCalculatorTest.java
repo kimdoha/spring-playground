@@ -1,7 +1,6 @@
-package com.basic.unittest;
+package com.basic.test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
+import com.basic.test.junit.MyCalculator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

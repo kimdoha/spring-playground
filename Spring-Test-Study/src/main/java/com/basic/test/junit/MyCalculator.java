@@ -1,4 +1,4 @@
-package com.basic.unittest;
+package com.basic.test.junit;
 
 public class MyCalculator {
   private Double result;

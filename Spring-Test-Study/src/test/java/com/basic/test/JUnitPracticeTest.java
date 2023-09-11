@@ -1,4 +1,4 @@
-package com.basic.unittest;
+package com.basic.test;
 
 import java.util.List;
 import org.junit.jupiter.api.Assertions;

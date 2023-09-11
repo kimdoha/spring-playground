@@ -1,5 +1,6 @@
-package com.basic.unittest;
+package com.basic.test;
 
+import com.basic.test.junit.MyCalculator;
 import java.util.stream.Stream;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
