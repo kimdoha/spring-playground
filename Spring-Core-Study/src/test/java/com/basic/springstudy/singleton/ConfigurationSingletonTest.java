@@ -1,10 +1,8 @@
 package com.basic.springstudy.singleton;
 
-import com.basic.springstudy.AppConfig;
-import com.basic.springstudy.repository.MemberRepository;
 import com.basic.springstudy.repository.MemoryMemberRepository;
 import com.basic.springstudy.service.member.MemberServiceImpl;
-import com.basic.springstudy.service.order.OrderServiceImpl;
+import config.AppConfig;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
@@ -13,7 +11,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class ConfigurationSingletonTest {
   @Test
   void configurationTest() {
-    ApplicationContext ac = new AnnotationConfigApplicationContext( AppConfig.class);
+    ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
 
     MemberServiceImpl memberService = ac.getBean("memberService", MemberServiceImpl.class);
     MemoryMemberRepository memberRepository = ac.getBean("memberRepository", MemoryMemberRepository.class);

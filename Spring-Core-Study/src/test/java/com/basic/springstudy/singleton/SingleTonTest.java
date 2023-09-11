@@ -1,6 +1,6 @@
 package com.basic.springstudy.singleton;
 
-import com.basic.springstudy.AppConfig;
+import config.AppConfig;
 import com.basic.springstudy.service.member.MemberService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
