@@ -18,7 +18,7 @@ repositories {
 dependencies {
    implementation project(':jpa-study')
    implementation project(':spring-study')
-   implementation project(':unit-test-study')
+   implementation project(':test-study')
 }
 
 tasks.named('test') {

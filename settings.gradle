@@ -2,4 +2,4 @@ rootProject.name = 'spring'
 
 include 'jpa-study'
 include 'spring-study'
-include 'unit-test-study'
+include 'test-study'
