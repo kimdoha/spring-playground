@@ -2,7 +2,9 @@ package com.basic.springstudy.service.order.policy;
 
 import com.basic.springstudy.entity.Member;
 import com.basic.springstudy.entity.enums.Grade;
+import org.springframework.stereotype.Component;
 
+@Component
 public class RateDiscountPolicy implements DiscountPolicy {
 
   private int discountPercent = 10; // 10% 할인

@@ -6,14 +6,22 @@ import com.basic.springstudy.repository.MemoryMemberRepository;
 import com.basic.springstudy.service.member.MemberService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Slf4j
-@Service
-@RequiredArgsConstructor
+@Component
 public class MemberServiceImpl implements MemberService {
+
+
   private final MemoryMemberRepository memberRepository;
+
+  @Autowired
+  public MemberServiceImpl(MemoryMemberRepository memoryMemberRepository) {
+    this.memberRepository = memoryMemberRepository;
+  }
 
   //테스트 용도
   public MemoryMemberRepository getMemberRepository() {

@@ -1,4 +1,4 @@
-package com.basic.springstudy;
+package config;
 
 import com.basic.springstudy.repository.MemoryMemberRepository;
 import com.basic.springstudy.repository.MemoryMemberRepositoryImpl;

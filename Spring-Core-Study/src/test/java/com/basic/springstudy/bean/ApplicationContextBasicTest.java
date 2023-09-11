@@ -3,7 +3,7 @@ package com.basic.springstudy.bean;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.basic.springstudy.AppConfig;
+import config.AppConfig;
 import com.basic.springstudy.service.member.MemberService;
 import com.basic.springstudy.service.member.MemberServiceImpl;
 import org.junit.jupiter.api.DisplayName;

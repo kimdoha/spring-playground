@@ -2,11 +2,8 @@ package com.basic.springstudy.bean;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import com.basic.springstudy.AppConfig;
-import com.basic.springstudy.repository.MemberRepository;
 import com.basic.springstudy.repository.MemoryMemberRepository;
 import com.basic.springstudy.repository.MemoryMemberRepositoryImpl;
-import com.basic.springstudy.service.order.policy.DiscountPolicy;
 import java.util.Map;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
