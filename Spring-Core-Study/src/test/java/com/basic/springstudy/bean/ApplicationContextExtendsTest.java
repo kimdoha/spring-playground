@@ -40,7 +40,7 @@ public class ApplicationContextExtendsTest {
       System.out.println("key = " + key + " value = " + beansOfType.get(key));
     }
 
-    Assertions.assertEquals(beansOfType.size(), 2);
+    Assertions.assertEquals(2, beansOfType.size());
   }
 
   @Configuration

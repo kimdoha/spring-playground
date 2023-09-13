@@ -2,7 +2,7 @@ package com.basic.springstudy.singleton;
 
 import com.basic.springstudy.repository.MemoryMemberRepository;
 import com.basic.springstudy.service.member.MemberServiceImpl;
-import config.AppConfig;
+import com.basic.springstudy.config.AppConfig;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;

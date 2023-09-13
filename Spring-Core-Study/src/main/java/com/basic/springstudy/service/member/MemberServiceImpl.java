@@ -1,7 +1,6 @@
 package com.basic.springstudy.service.member;
 
 import com.basic.springstudy.entity.Member;
-import com.basic.springstudy.repository.MemberRepository;
 import com.basic.springstudy.repository.MemoryMemberRepository;
 import com.basic.springstudy.service.member.MemberService;
 import lombok.RequiredArgsConstructor;
