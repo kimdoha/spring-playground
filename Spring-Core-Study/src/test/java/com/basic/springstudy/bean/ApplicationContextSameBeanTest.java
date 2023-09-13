@@ -56,6 +56,4 @@ public class ApplicationContextSameBeanTest {
       return new MemoryMemberRepositoryImpl();
     }
   }
-
-
 }
