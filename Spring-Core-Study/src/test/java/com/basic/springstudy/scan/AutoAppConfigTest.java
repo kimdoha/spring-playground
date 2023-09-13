@@ -1,7 +1,7 @@
 package com.basic.springstudy.scan;
 
 import com.basic.springstudy.service.member.MemberService;
-import config.AutoAppConfig;
+import com.basic.springstudy.config.AutoAppConfig;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
